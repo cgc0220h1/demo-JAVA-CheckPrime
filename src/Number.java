@@ -14,10 +14,13 @@ public class Number {
         }
 
         if (!isSpecialNum) {
-            for (int index = 2; index <= Math.sqrt(number); index++) {
+            int index = 2;
+            while (index <= Math.sqrt(number)) {
                 if (number % index == 0) {
                     isPrime = false;
+                    break;
                 }
+                index++;
             }
         }
 
